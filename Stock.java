@@ -27,6 +27,13 @@ public class Stock {
 		momentum = (Math.random()*0.01)+0.01;
 	}
 	
+	//copy constructor
+	public Stock(Stock s){
+		ticker = s.ticker;
+		price = s.price;
+		momentum = s.momentum;
+	}
+	
 	
 	//apply the momentum change
 	public void changePrice(){
