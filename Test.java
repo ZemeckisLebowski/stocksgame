@@ -3,21 +3,19 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		RandomTicker test = new RandomTicker();
-		System.out.println(test.create());
-		test.newStr();
-		Stock test2 = new Stock();
-		Stock test3 = new Stock();
-		Stock test4 = new Stock();
-		Stock test5 = new Stock();
-		System.out.println(test2);
-		System.out.println(test3);
-		System.out.println(test4);
-		System.out.println(test5);
-
+		StockMarket market = new StockMarket(12);
+		Stock test1 = new Stock(market.lookupNum(5));
+		String testStr = test1.getTicker();
+		System.out.println(test1);
+		System.out.println(testStr);
+		System.out.println(market.lookup(testStr));
+		System.out.println(market);
+		System.out.println(market.listTickers());
 	}
 
 }
+
+
 //This one is in here just so I can have all my code I use online.
 
 //stocksgame (c) 2015 ZemeckisLebowski
